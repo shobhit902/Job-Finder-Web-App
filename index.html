@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Finder</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+      #search-section {
+        margin: 20px 0;
+      }
+      #search-section input {
+        padding: 10px;
+        width: 60%;
+      }
+      #search-section button {
+        padding: 10px 15px;
+      }
+      #result-section {
+        margin-top: 30px;
+      }
+      .job-card {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+      }
+      #loading-spinner {
+        display: none;
+        text-align: center;
+        color: gray;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Job Finder
+        <span style="font-size: 14px; display: block;">Find remote jobs instantly</span>
+      </h1>
+    </header>
+
+    <section id="search-section">
+      <input type="text" id="search-input" placeholder="Search for jobs e.g., React" />
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <section id="result-section">
+  
+      <div id="loading-spinner">Loading...</div>
+
+      <div id="jobs-container"></div>
+    </section>
+
+
+    <section id="saved-section" style="display: none;">
+      <h2>Saved Jobs</h2>
+      <div id="saved-jobs-container"></div>
+    </section>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
