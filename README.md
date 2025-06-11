@@ -26,7 +26,7 @@ Feature	Description
 🧱 Tech Stack
 HTML, CSS, JS (Vanilla)
 
-Remotive API: https://remotive.io/api/remote-jobs
+Remotive API: https://remotive.com/api/remote-jobs
 
 🪜 Step-by-Step Roadmap
 🛠️ Phase 1: Project Setup

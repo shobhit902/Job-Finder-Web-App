@@ -20,10 +20,12 @@
       }
       #search-section button {
         padding: 10px 15px;
+        cursor: pointer;
       }
       #result-section {
         margin-top: 30px;
       }
+
       .job-card {
         border: 1px solid #ccc;
         padding: 15px;
@@ -36,33 +38,64 @@
         color: gray;
         font-style: italic;
       }
+      #toast {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: none;
+        z-index: 9999;
+        font-size: 14px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .textcontent {
+        font-weight: bold;
+        font-style: italic;
+      }
     </style>
   </head>
   <body>
     <header>
       <h1>
         Job Finder
-        <span style="font-size: 14px; display: block;">Find remote jobs instantly</span>
+        <span style="font-size: 14px; display: block"
+          >Find remote jobs instantly</span
+        >
       </h1>
     </header>
 
     <section id="search-section">
-      <input type="text" id="search-input" placeholder="Search for jobs e.g., React" />
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search for jobs e.g., cloud"
+      />
       <button id="searchBtn">Search</button>
+      <button id="view-btn">View Saved Jobs</button>
     </section>
-
+    <section id="view-saved-jobs">
+      <div id="collapse-panel"></div>
+    </section>
     <section id="result-section">
-  
-      <div id="loading-spinner">Loading...</div>
+      <div id="loading-spinner"></div>
 
       <div id="jobs-container"></div>
     </section>
 
-
-    <section id="saved-section" style="display: none;">
+    <section id="saved-section" style="display: none">
       <h2>Saved Jobs</h2>
       <div id="saved-jobs-container"></div>
     </section>
+    <div id="toast">Job saved! ✅</div>
+
     <script src="./script/script.js"></script>
   </body>
 </html>
